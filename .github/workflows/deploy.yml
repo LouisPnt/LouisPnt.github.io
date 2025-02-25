@@ -1,25 +1,37 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - main  # ou master, selon votre branche principale
+      - main  # ou master selon votre branche principale
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install and Build 🔧
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
         run: |
+          cd portfolio
           npm install
+
+      - name: Build
+        run: |
+          cd portfolio
           npm run build
         env:
           NODE_ENV: production
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: dist
+          folder: portfolio/dist
+          clean: true
