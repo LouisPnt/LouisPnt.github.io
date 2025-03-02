@@ -1,25 +1,18 @@
-<template>
-  <Home/>
-</template>
+<script setup>
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
 
-<script>
-import Home from './components/Home.vue'
+const title = ref(null);
 
-export default {
-  name: 'App',
-  components: {
-    Home
-  }
-}
+onMounted(() => {
+  gsap.from(title.value, { opacity: 0, y: -50, duration: 1 });
+});
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <div class="flex flex-col items-center justify-center h-screen">
+    <h1 ref="title" class="text-5xl font-bold text-blue-400">
+      Mon Portfolio 🚀
+    </h1>
+  </div>
+</template>
