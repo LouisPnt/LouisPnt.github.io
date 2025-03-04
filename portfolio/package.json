@@ -12,6 +12,7 @@
     "@vueuse/motion": "^2.2.6",
     "core-js": "^3.8.3",
     "gsap": "^3.12.7",
+    "particles.js": "^2.0.0",
     "portfolio": "file:",
     "vue": "^3.2.13"
   },

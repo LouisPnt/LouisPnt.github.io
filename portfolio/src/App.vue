@@ -74,16 +74,35 @@ onMounted(() => {
     </section> -->
 
     <!-- À Propos -->
-    <section ref="sections" id="about" class="min-h-screen flex flex-col items-center justify-center px-6">
-      <h2 class="text-4xl font-bold text-blue-400 mb-4">À Propos de Moi</h2>
-      <div class="flex flex-col items-center md:flex-row md:space-x-10">
-        <img src="/profile.jpg" alt="Photo de profil" class="w-40 h-40 rounded-full border-4 border-blue-400 object-cover" />
-        <div class="mt-4 md:mt-0">
-          <p class="text-lg">👋 Bonjour, je suis <span class="text-blue-400 font-semibold">Louis Penet</span>.</p>
-          <p class="text-lg">📍 Je vis à <span class="text-blue-400 font-semibold">Toulouse</span>.</p>
-          <p class="text-lg">🎂 J’ai <span class="text-blue-400 font-semibold">20 ans</span>.</p>
-          <p class="text-lg">📧 Contact : <span class="text-blue-400 font-semibold">louispenet2004@gmail.com</span></p>
-          <p class="text-lg">🗣️ Langues : Anglais (B2 - TOEIC 920/990), Espagnol (B1)</p>
+    <section ref="sections" id="about" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-r from-gray-800 to-gray-900">
+      <div id="particles-js" class="absolute inset-0 z-0"></div>
+      
+      <!-- Conteneur principal -->
+      <div class="flex flex-col items-center text-center space-y-6">
+        <!-- Photo de profil -->
+        <img src="/profile.jpg" alt="Photo de profil" class="w-56 h-56 rounded-full border-4 border-blue-400 object-cover shadow-lg hover:scale-105 transition-transform duration-300" />
+
+        <!-- Titre et sous-titre -->
+        <div class="space-y-4">
+          <h1 class="text-5xl font-bold text-blue-400">Louis Penet</h1>
+          <p class="text-2xl text-gray-300">Étudiant en informatique</p>
+        </div>
+
+        <!-- Texte d'introduction -->
+        <p class="text-lg text-gray-400 max-w-2xl">
+          Passionné par le développement web et les nouvelles technologies, je suis actuellement en formation pour devenir développeur full-stack. Basé à Toulouse, je recherche des opportunités pour mettre mes compétences en pratique et contribuer à des projets innovants.
+        </p>
+
+        <!-- Informations supplémentaires (optionnel) -->
+        <div class="flex space-x-4 text-gray-400">
+          <p class="flex items-center space-x-2">
+            <img src="/icons/pin.svg" alt="Localisation" class="w-5 h-5" />
+            <span>Toulouse</span>
+          </p>
+          <p class="flex items-center space-x-2">
+            <img src="/icons/mail.svg" alt="E-mail" class="w-5 h-5" />
+            <span>louispenet2004@gmail.com</span>
+          </p>
         </div>
       </div>
     </section>
@@ -95,6 +114,7 @@ onMounted(() => {
       <div class="relative w-full max-w-3xl">
         <!-- Ligne de la timeline -->
         <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-400"></div>
+        
         
         <!-- Carte BUT Informatique (à gauche) -->
         <div class="relative flex items-center justify-between mb-8">
@@ -133,7 +153,7 @@ onMounted(() => {
 
           <!-- Conteneur du carrousel -->
           <div class="relative overflow-hidden w-full">
-            <div class="flex space-x-8 carousel" :class="'carousel-' + index">
+            <div class="flex space-x-6 carousel" :class="'carousel-' + index">
               <!-- Boucle sur les icônes (originales + dupliquées 2 fois) -->
               <div v-for="(logo, logoIndex) in [...skill.logos, ...skill.logos, ...skill.logos]" :key="logoIndex" class="flex flex-col items-center">
                 <img :src="logo" class="w-16 h-16 object-contain" />
@@ -146,12 +166,30 @@ onMounted(() => {
 
     <!-- Expérience -->
     <section ref="sections" id="experience" class="min-h-screen flex flex-col items-center justify-center px-6">
-      <h2 class="text-4xl font-bold text-blue-400 mb-4">Expérience Professionnelle</h2>
-      <div class="bg-gray-800 p-6 rounded-lg w-full max-w-2xl">
-        <p class="text-lg"><span class="text-blue-400 font-semibold">2024 :</span> Stage de développement (Désirade, Toulouse)</p>
-        <p class="text-md">Développement en ASP.NET, SQL et collaboration avec Airbus & Thalès</p>
-        <p class="mt-4 text-lg"><span class="text-blue-400 font-semibold">2024 :</span> AGH Autumn School on Space Resources and Robotics (Cracovie, Pologne)</p>
-        <p class="text-md">Collaboration internationale sur la robotique spatiale</p>
+      <h2 class="text-4xl font-bold text-blue-400 mb-8">Expérience Professionnelle</h2>
+
+      <div class="w-full max-w-4xl space-y-6">
+        <!-- Carte pour l'événement AGH Autumn School -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex items-start space-x-6">
+          <!-- Logo de l'événement (si disponible) -->
+          <img src="/icons/agh-logo.jpeg" alt="Logo AGH Autumn School" class="w-32 h-32 object-contain bg-white p-2 rounded-lg" />
+          <div>
+            <p class="text-lg text-blue-400 font-semibold">2024 : AGH Autumn School on Space Resources and Robotics</p>
+            <p class="text-gray-300">Cracovie, Pologne</p>
+            <p class="text-sm text-gray-400 mt-2">Collaboration internationale sur la robotique spatiale</p>
+          </div>
+        </div>
+
+        <!-- Carte pour le stage chez Desirade -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 flex items-start space-x-6">
+          <!-- Logo de Desirade -->
+          <img src="/icons/desirade.png" alt="Logo Desirade" class="w-32 h-32 object-contain bg-white p-2 rounded-lg" />
+          <div>
+            <p class="text-lg text-blue-400 font-semibold">2024 : Stage de développement</p>
+            <p class="text-gray-300">Désirade, Toulouse</p>
+            <p class="text-sm text-gray-400 mt-2">Développement en ASP.NET, SQL et collaboration avec Airbus & Thalès</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -171,6 +209,20 @@ onMounted(() => {
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AboutSection',
+  mounted() {
+    // Initialisation de Particles.js après le chargement du DOM
+    if (window.particlesJS) {
+      window.particlesJS.load('particles-js', '/particles.json', function() {
+        console.log('Animation de particules chargée !');
+      });
+    }
+  },
+};
+</script>
 
 <style scoped>
 html {
