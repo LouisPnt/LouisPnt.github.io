@@ -1,6 +1,8 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
 import gsap from 'gsap';
+import ButCompetences from './components/ButCompetences.vue';
+import ProjetsSection from './components/ProjetsSection.vue';
 
 const skills = ref([
   {
@@ -60,7 +62,9 @@ onMounted(() => {
       <nav class="container mx-auto flex justify-center space-x-6">
         <a href="#about" class="text-blue-400 hover:underline">À Propos</a>
         <a href="#education" class="text-blue-400 hover:underline">Formation</a>
-        <a href="#skills" class="text-blue-400 hover:underline">Compétences</a>
+        <a href="#but-competences" class="text-blue-400 hover:underline">Compétences du BUT</a>
+        <a href="#projets" class="text-blue-400 hover:underline">Projets</a>
+        <a href="#skills" class="text-blue-400 hover:underline">Compétences Techniques</a>
         <a href="#experience" class="text-blue-400 hover:underline">Expérience</a>
         <a href="#interests" class="text-blue-400 hover:underline">Centres d'Intérêt</a>
       </nav>
@@ -78,7 +82,7 @@ onMounted(() => {
       <div id="particles-js" class="absolute inset-0 z-0"></div>
       
       <!-- Conteneur principal -->
-      <div class="flex flex-col items-center text-center space-y-6">
+      <div class="relative z-10 flex flex-col items-center text-center space-y-6">
         <!-- Photo de profil -->
         <img src="/profile.jpg" alt="Photo de profil" class="w-56 h-56 rounded-full border-4 border-blue-400 object-cover shadow-lg hover:scale-105 transition-transform duration-300" />
 
@@ -139,6 +143,10 @@ onMounted(() => {
         </div>
       </div>
     </section>
+
+    <ButCompetences />
+    
+    <ProjetsSection />
 
 
 
