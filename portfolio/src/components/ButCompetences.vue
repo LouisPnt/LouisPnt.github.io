@@ -1,6 +1,5 @@
 <template>
-  <section ref="sections" id="but-competences" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gray-900">
-    <h2 class="text-4xl font-bold text-blue-400 mb-8">Compétences du BUT Informatique</h2>
+    <h3 class="text-4xl font-bold text-blue-400 mb-8">Compétences du BUT Informatique</h3>
 
     <div class="w-full max-w-4xl space-y-6">
       <!-- Compétence 1 : Réaliser un développement d'application -->
@@ -51,7 +50,6 @@
         </p>
       </div>
     </div>
-  </section>
 </template>
 
 <script>

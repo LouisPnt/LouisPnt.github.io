@@ -14,7 +14,8 @@
     "gsap": "^3.12.7",
     "particles.js": "^2.0.0",
     "portfolio": "file:",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
