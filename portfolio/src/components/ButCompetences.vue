@@ -1,5 +1,5 @@
 <template>
-    <h3 class="text-4xl font-bold text-blue-400 mb-8">Compétences du BUT Informatique</h3>
+    <h3 class="text-3xl font-semibold text-gray-300 mb-6">Compétences du BUT Informatique</h3>
 
     <div class="w-full max-w-4xl space-y-6">
       <!-- Compétence 1 : Réaliser un développement d'application -->

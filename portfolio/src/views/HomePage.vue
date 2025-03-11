@@ -133,11 +133,11 @@ onMounted(() => {
     </section>
 
      <!-- Section Compétences -->
-     <section id="skills" class="min-h-screen flex flex-col items-center justify-center px-6" bg-gray-900>
-      <h2 class="text-4xl font-bold text-blue-400 mb-8">Compétences</h2>
-      <ButCompetences />
+     <section id="skills" class="min-h-screen flex flex-col items-center justify-center px-6 pt-16" bg-gray-900>
+      <h2 class="text-4xl font-bold text-blue-400 mb-8">Compétences</h2>      
+        <ButCompetences />
       <br><br>
-      <h3 class="text-4xl font-bold text-blue-400 mb-8">Compétences techniques</h3>
+      <h3 class="text-3xl font-semibold text-gray-300 mb-6">Compétences techniques</h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
         <!-- Boucle sur les catégories -->
@@ -157,9 +157,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <br>
     <ProjetsSection />
-
 
     <!-- Expérience -->
     <section ref="sections" id="experience" class="min-h-screen flex flex-col items-center justify-center px-6">
@@ -173,7 +171,7 @@ onMounted(() => {
           <div>
             <p class="text-lg text-blue-400 font-semibold">2024 : AGH Autumn School on Space Resources and Robotics</p>
             <p class="text-gray-300">Cracovie, Pologne</p>
-            <p class="text-sm text-gray-400 mt-2">Collaboration internationale sur la robotique spatiale</p>
+            <p class="text-sm text-gray-400 mt-2">Cours et échanges avec des étudiants européens sur les ressources spatiales, la robotique et l'utilisation de l'intelligence artificielle dans ce domaine.</p>
           </div>
         </div>
 
@@ -191,12 +189,29 @@ onMounted(() => {
     </section>
 
     <!-- Centres d'Intérêt -->
-    <section ref="sections" id="interests" class="min-h-screen flex flex-col items-center justify-center px-6">
-      <h2 class="text-4xl font-bold text-blue-400 mb-4">Centres d'Intérêt</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-800 p-4 rounded-lg text-center">🥋 Aïkido (10+ ans de pratique)</div>
-        <div class="bg-gray-800 p-4 rounded-lg text-center">🎶 Musique Assistée par Ordinateur (Beatmaking)</div>
-        <div class="bg-gray-800 p-4 rounded-lg text-center">🎬 Cinéma</div>
+    <section ref="sections" id="interests" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gray-900">
+      <h2 class="text-4xl font-bold text-blue-400 mb-8">Centres d'Intérêt</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+        <!-- Aïkido -->
+        <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <div class="text-6xl mb-4">🥋</div>
+          <h3 class="text-xl font-semibold text-blue-400 mb-2">Aïkido</h3>
+          <p class="text-gray-300">10+ ans de pratique</p>
+        </div>
+
+        <!-- Musique Assistée par Ordinateur -->
+        <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <div class="text-6xl mb-4">🎶</div>
+          <h3 class="text-xl font-semibold text-blue-400 mb-2">MAO (Beatmaking)</h3>
+          <p class="text-gray-300">Création musicale numérique</p>
+        </div>
+
+        <!-- Cinéma -->
+        <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+          <div class="text-6xl mb-4">🎬</div>
+          <h3 class="text-xl font-semibold text-blue-400 mb-2">Cinéma</h3>
+          <p class="text-gray-300">Passionné de films et de séries</p>
+        </div>
       </div>
     </section>
 

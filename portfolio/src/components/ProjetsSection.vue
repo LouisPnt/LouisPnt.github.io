@@ -1,5 +1,5 @@
 <template>
-  <section ref="sections" id="projets" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gray-900">
+  <section ref="sections" id="projets" class="min-h-screen flex flex-col items-center justify-center px-6 pt-20 bg-gray-900">
     <h2 class="text-4xl font-bold text-blue-400 mb-8">Mes Projets</h2>
 
     <div class="w-full max-w-4xl space-y-12">
@@ -17,7 +17,7 @@
             <span class="font-semibold">Compétences du BUT : </span>
             <a @click="openModal(1)" class="text-blue-400 hover:underline cursor-pointer">Réaliser un développement d'application (1)</a>,
             <a @click="openModal(2)" class="text-blue-400 hover:underline cursor-pointer">Optimiser des applications informatiques (2)</a>,
-            <a @click="openModal(6)" class="text-blue-400 hover:underline cursor-pointer">Travailler dans une équipe informatique (6)</a>.
+            <a @click="openModal(6)" class="text-blue-400 hover:underline cursor-pointer">Travailler dans une équipe informatique (6)</a>
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@
             <a @click="openModal(3)" class="text-blue-400 hover:underline cursor-pointer">Administrer des systèmes informatiques communicants complexes (3)</a>,
             <a @click="openModal(4)" class="text-blue-400 hover:underline cursor-pointer">Gérer des données de l'information (4)</a>,
             <a @click="openModal(5)" class="text-blue-400 hover:underline cursor-pointer">Conduire un projet (5)</a>,
-            <a @click="openModal(6)" class="text-blue-400 hover:underline cursor-pointer">Travailler dans une équipe informatique (6)</a>.
+            <a @click="openModal(6)" class="text-blue-400 hover:underline cursor-pointer">Travailler dans une équipe informatique (6)</a>
           </p>
         </div>
       </div>
@@ -56,7 +56,7 @@
           </p>
           <p class="text-sm text-gray-400">
             <span class="font-semibold">Compétences du BUT : </span>
-            <a @click="openModal(3)" class="text-blue-400 hover:underline cursor-pointer">Administrer des systèmes informatiques communicants complexes (3)</a>.
+            <a @click="openModal(3)" class="text-blue-400 hover:underline cursor-pointer">Administrer des systèmes informatiques communicants complexes (3)</a>
           </p>
         </div>
       </div>
