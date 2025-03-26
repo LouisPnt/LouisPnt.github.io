@@ -66,13 +66,13 @@ onMounted(() => {
     </section> -->
 
     <!-- À Propos -->
-    <section ref="sections" id="about" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-r from-gray-800 to-gray-900">
+    <section ref="sections" id="about" class="min-h-screen flex flex-col items-center px-6 bg-gradient-to-r from-gray-800 to-gray-900">
       <div id="particles-js" class="absolute inset-0 z-0"></div>
       
       <!-- Conteneur principal -->
       <div class="relative z-10 flex flex-col items-center text-center space-y-6">
         <!-- Photo de profil -->
-        <img src="/profile.jpg" alt="Photo de profil" class="w-56 h-56 rounded-full border-4 border-blue-400 object-cover shadow-lg hover:scale-105 transition-transform duration-300" />
+        <img src="/profile.jpg" alt="Photo de profil" class="w-56 h-56 rounded-full border-4 border-blue-400 object-cover shadow-lg transition-transform duration-300" />
 
         <!-- Titre et sous-titre -->
         <div class="space-y-4">
@@ -82,8 +82,9 @@ onMounted(() => {
 
         <!-- Texte d'introduction -->
         <p class="text-lg text-gray-400 max-w-2xl">
-          Passionné par le développement web et les nouvelles technologies, je suis actuellement en formation pour devenir développeur full-stack. Basé à Toulouse, je recherche des opportunités pour mettre mes compétences en pratique et contribuer à des projets innovants.
+          <strong>Passionné</strong> par le développement web et les nouvelles technologies, je suis actuellement en formation pour devenir <strong>développeur full-stack</strong>. Basé à <strong>Toulouse</strong>, je recherche des <strong>opportunités</strong> pour mettre mes <strong>compétences</strong> en pratique et contribuer à des projets innovants.
         </p>
+
 
         <!-- Informations supplémentaires (optionnel) -->
         <div class="flex space-x-4 text-gray-400">
@@ -100,7 +101,7 @@ onMounted(() => {
     </section>
 
     <!-- Formation -->
-    <section ref="sections" id="education" class="min-h-screen flex flex-col items-center justify-center px-6">
+    <section ref="sections" id="education" class="min-h-screen flex flex-col items-center px-6">
       <h2 class="text-4xl font-bold text-blue-400 mb-8">Formation</h2>
       
       <div class="relative w-full max-w-3xl">
@@ -133,7 +134,7 @@ onMounted(() => {
     </section>
 
      <!-- Section Compétences -->
-     <section id="skills" class="min-h-screen flex flex-col items-center justify-center px-6 pt-16" bg-gray-900>
+     <section id="skills" class="min-h-screen flex flex-col items-center px-6 pt-16" bg-gray-900>
       <h2 class="text-4xl font-bold text-blue-400 mb-8">Compétences</h2>      
         <ButCompetences />
       <br><br>
@@ -160,7 +161,7 @@ onMounted(() => {
     <ProjetsSection />
 
     <!-- Expérience -->
-    <section ref="sections" id="experience" class="min-h-screen flex flex-col items-center justify-center px-6">
+    <section ref="sections" id="experience" class="min-h-screen flex flex-col items-center px-6">
       <h2 class="text-4xl font-bold text-blue-400 mb-8">Expérience Professionnelle</h2>
 
       <div class="w-full max-w-4xl space-y-6">
@@ -171,7 +172,7 @@ onMounted(() => {
           <div>
             <p class="text-lg text-blue-400 font-semibold">2024 : AGH Autumn School on Space Resources and Robotics</p>
             <p class="text-gray-300">Cracovie, Pologne</p>
-            <p class="text-sm text-gray-400 mt-2">Cours et échanges avec des étudiants européens sur les ressources spatiales, la robotique et l'utilisation de l'intelligence artificielle dans ce domaine.</p>
+            <p class="text-sm text-gray-400 mt-2">Cours et échanges avec des étudiants <strong>européens</strong> sur les <strong>ressources spatiales</strong>, la <strong>robotique</strong> et l'utilisation de l'<strong>intelligence artificielle</strong> dans ce domaine.</p>
           </div>
         </div>
 
@@ -182,14 +183,14 @@ onMounted(() => {
           <div>
             <p class="text-lg text-blue-400 font-semibold">2024 : Stage de développement</p>
             <p class="text-gray-300">Désirade, Toulouse</p>
-            <p class="text-sm text-gray-400 mt-2">Développement en ASP.NET, SQL et collaboration avec Airbus & Thalès</p>
+            <p class="text-sm text-gray-400 mt-2">Développement en <strong>ASP.NET</strong>, <strong>SQL</strong> et collaboration avec <strong>Airbus</strong> & <strong>Thalès</strong></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Centres d'Intérêt -->
-    <section ref="sections" id="interests" class="min-h-screen flex flex-col items-center justify-center px-6 bg-gray-900">
+    <section ref="sections" id="interests" class="min-h-screen flex flex-col items-center px-6 bg-gray-900">
       <h2 class="text-4xl font-bold text-blue-400 mb-8">Centres d'Intérêt</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4">
         <!-- Aïkido -->

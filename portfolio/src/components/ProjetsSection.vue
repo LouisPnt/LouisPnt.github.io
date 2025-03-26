@@ -11,7 +11,7 @@
         <div class="text-center">
           <h3 class="text-xl font-semibold text-blue-400 mb-4">Développement d'une application web</h3>
           <p class="text-gray-300 mb-4">
-            Ce projet a permis de développer une application web complète en utilisant des technologies modernes telles que HTML5, CSS3, PHP et JavaScript. L'utilisation de Docker pour administrer une base de données locale a été un point clé de ce projet. Des réunions régulières avec le client et une gestion de projet en méthode agile avec GitHub ont été mises en place pour assurer une collaboration efficace.
+            Ce projet a permis de développer une application web complète en utilisant des technologies modernes telles que <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>PHP</strong> et <strong>JavaScript</strong>. L'utilisation de <strong>Docker</strong> pour administrer une base de données locale a été un point clé de ce projet. Des réunions régulières avec le client et une gestion de projet en <strong>méthode agile</strong> avec <strong>GitHub</strong> ont été mises en place pour assurer une collaboration efficace.
           </p>
           <p class="text-sm text-gray-400">
             <span class="font-semibold">Compétences du BUT : </span>
@@ -30,8 +30,9 @@
         <div class="text-center">
           <h3 class="text-xl font-semibold text-blue-400 mb-4">Création d'un site web de e-commerce</h3>
           <p class="text-gray-300 mb-4">
-            Ce projet consistait à créer un site web de e-commerce avec un panier fonctionnel et une gestion de compte utilisateur. Les technologies utilisées incluent HTML5, CSS3 et PHP, ainsi que la conception et la création d'une base de données avec PHPMyAdmin. Ce projet a nécessité une collaboration étroite au sein d'une équipe de 4 personnes.
+            Ce projet consistait à créer un site web de e-commerce avec un panier fonctionnel et une gestion de compte utilisateur. Les technologies utilisées incluent <strong>HTML5</strong>, <strong>CSS3</strong> et <strong>PHP</strong>, ainsi que la conception et la création d'une base de données avec <strong>PHPMyAdmin</strong>. Ce projet a nécessité une collaboration étroite au sein d'une équipe de 4 personnes.
           </p>
+
           <p class="text-sm text-gray-400">
             <span class="font-semibold">Compétences du BUT : </span>
             <a @click="openModal(1)" class="text-blue-400 hover:underline cursor-pointer">Réaliser un développement d'application (1)</a>,
@@ -52,7 +53,7 @@
         <div class="text-center">
           <h3 class="text-xl font-semibold text-blue-400 mb-4">Installation et configuration d'un poste de travail sous Xubuntu</h3>
           <p class="text-gray-300 mb-4">
-            Ce projet a impliqué l'installation et la configuration d'un poste de travail sous Xubuntu. Les tâches comprenaient la configuration d'une machine virtuelle via VirtualBox, l'installation des logiciels requis (Java JDK/JRE, ProjectLibre, etc.), et la rédaction de scripts Bash pour l'automatisation des tâches. Ce projet a été réalisé en binôme, avec une attention particulière portée au paramétrage du système et à la résolution des problèmes techniques.
+            Ce projet a impliqué l'installation et la configuration d'un poste de travail sous <strong>Xubuntu</strong>. Les tâches comprenaient la configuration d'une machine virtuelle via <strong>VirtualBox</strong>, l'installation des logiciels requis (<strong>Java JDK/JRE</strong>, <strong>ProjectLibre</strong>, etc.), et la rédaction de scripts <strong>Bash</strong> pour l'automatisation des tâches. Ce projet a été réalisé en binôme, avec une attention particulière portée au paramétrage du système et à la résolution des problèmes techniques.
           </p>
           <p class="text-sm text-gray-400">
             <span class="font-semibold">Compétences du BUT : </span>
