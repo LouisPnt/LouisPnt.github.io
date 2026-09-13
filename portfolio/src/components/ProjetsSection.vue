@@ -3,6 +3,122 @@
     <h2 class="text-4xl font-bold text-blue-400 mb-8">Mes Projets</h2>
 
     <div class="w-full max-w-4xl space-y-12">
+
+    <!-- PROJETS VISUALISATION DONNEES -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        
+        <!-- Conteneur FLEX : Aligne Bouton gauche - Image - Bouton droite -->
+        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6">
+          
+          <!-- Bouton Précédent (Flèche gauche) -->
+          <button 
+            @click="prevDataVisImage" 
+            class="flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white p-2 md:p-3 rounded-full focus:outline-none transition-colors"
+            aria-label="Image précédente"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Conteneur de l'image (au centre) -->
+          <div class="relative w-full max-w-2xl overflow-hidden rounded-lg shadow-sm">
+            <!-- Image active affichée -->
+            <img 
+              :src="dataVisImages[currentIndexDataVis]" 
+              alt="Projets de visualisation de données" 
+              class="w-full h-auto object-cover rounded-lg transition-all duration-300" 
+            />
+          </div>
+
+          <!-- Bouton Suivant (Flèche droite) -->
+          <button 
+            @click="nextDataVisImage" 
+            class="flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white p-2 md:p-3 rounded-full focus:outline-none transition-colors"
+            aria-label="Image suivante"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+        </div>
+
+        <!-- Description du projet -->
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-blue-400 mb-4">Création d'indicateurs de données</h3>
+          <p class="text-gray-300 mb-4">
+            Durant mon master puis sur mon temps libre, j'ai eu l'occasion de réaliser des visualisations de données à l'aide du logiciel <strong>Tableau</strong> (projet universitaire accessible sur 
+              <a href="https://public.tableau.com/views/Classeur_fifa/Histoire1?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="text-blue-400 font-semibold hover:underline hover:text-blue-300 transition-colors" target="_blank">Tableau Public</a>). 
+            Pour réaliser ces deux séries d'indicateurs, je me suis basé sur des jeux de données libres ou réalisés par des amis.
+          </p>
+        </div>
+      </div>
+
+<!-- PROJET DE RECHERCHE -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        
+        <!-- Conteneur FLEX : Aligne Bouton gauche - Image - Bouton droite -->
+        <div class="flex items-center justify-center gap-2 md:gap-6 mb-6">
+          
+          <!-- Bouton Précédent -->
+          <button 
+            @click="prevRechercheImage" 
+            class="flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white p-2 md:p-3 rounded-full focus:outline-none transition-colors"
+            aria-label="Image précédente"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <!-- Conteneur de l'image (au centre) -->
+          <div class="relative w-full max-w-2xl overflow-hidden rounded-lg shadow-sm">
+            <!-- Image active affichée -->
+            <img 
+              :src="rechercheImages[currentIndexRecherche]" 
+              alt="Projets de recherche" 
+              class="w-full h-auto object-cover rounded-lg transition-all duration-300" 
+            />
+
+            <!-- Indicateurs de position (points) -->
+            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+              <button 
+                v-for="(img, index) in rechercheImages" 
+                :key="index"
+                @click="currentIndexRecherche = index"
+                :class="['w-2.5 h-2.5 rounded-full shadow-md transition-colors', currentIndexRecherche === index ? 'bg-blue-400' : 'bg-white/60 hover:bg-white']"
+                :aria-label="`Aller à l'image ${index + 1}`"
+              ></button>
+            </div>
+          </div>
+
+          <!-- Bouton Suivant -->
+          <button 
+            @click="nextRechercheImage" 
+            class="flex-shrink-0 bg-gray-700 hover:bg-gray-600 text-white p-2 md:p-3 rounded-full focus:outline-none transition-colors"
+            aria-label="Image suivante"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+        </div>
+                
+        <!-- Description du projet -->
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-blue-400 mb-4">Projet de recherche de M1 : Comment faire de l'apprentissage de métriques éthique ?</h3>
+          <p class="text-gray-300 mb-4">
+            Durant quelques mois, j'ai découvert le monde de la recherche en travaillant en binôme sur un sujet primordial : l'apprentissage "éthique" de métriques en <strong> Machine Learning </strong>.
+            En effet, le Machine Learning commence à être employé dans de nombreux domaines et il est important de réfléchir à la manière dont le modèle 
+            considère les données qu'il reçoit lorsque cela concerne des informations sensibles comme le genre ou l'ethnie, afin de ne pas produire de manière
+            inconsciente des stéréotypes discriminants.
+          </p>
+        </div>
+      </div>
+
+
       <!-- Projet 1 : Développement d'une application web -->
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
         <!-- Image du projet -->
@@ -81,6 +197,25 @@ export default {
   name: 'ProjetsSection',
   data() {
     return {
+
+      rechercheImages: [
+        '/images/projet_recherche_1.png',
+        '/images/projet_recherche_2.png',
+        '/images/projet_recherche_3.png',
+        '/images/projet_recherche_4.png',
+        '/images/projet_recherche_5.png',
+        '/images/projet_recherche_6.png'
+      ],
+      currentIndexRecherche: 0,
+
+      // --- NOUVELLES VARIABLES POUR LE CARROUSEL ---
+      dataVisImages: [
+        '/images/projet_fifa.png',
+        '/images/projet_fives.png'
+      ],
+      currentIndexDataVis: 0,
+      // ---------------------------------------------
+
       isModalOpen: false,
       selectedCompetence: {},
       competences: [
@@ -118,6 +253,21 @@ export default {
     };
   },
   methods: {
+    // --- NOUVELLES METHODES POUR LE CARROUSEL ---
+    nextDataVisImage() {
+      this.currentIndexDataVis = (this.currentIndexDataVis + 1) % this.dataVisImages.length;
+    },
+    prevDataVisImage() {
+      this.currentIndexDataVis = (this.currentIndexDataVis - 1 + this.dataVisImages.length) % this.dataVisImages.length;
+    },
+    nextRechercheImage() {
+      this.currentIndexRecherche = (this.currentIndexRecherche + 1) % this.rechercheImages.length;
+    },
+    prevRechercheImage() {
+      this.currentIndexRecherche = (this.currentIndexRecherche - 1 + this.rechercheImages.length) % this.rechercheImages.length;
+    },
+    // ---------------------------------------------
+
     openModal(competenceId) {
       this.selectedCompetence = this.competences.find(c => c.id === competenceId);
       this.isModalOpen = true;
